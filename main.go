@@ -12,7 +12,7 @@ import (
 func main() {
 	r := gin.Default()
 	r.LoadHTMLGlob("public/*.html")
-	pageStore := persistence.NewInMemoryStore(time.Minute)
+	pageStore := persistence.NewInMemoryStore(time.Hour * 24)
 
 
 	r.GET("/", cache.CachePage(pageStore, time.Minute,func(c *gin.Context) {
