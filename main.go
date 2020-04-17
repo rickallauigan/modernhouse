@@ -16,5 +16,5 @@ func main() {
 
 	r.Static("/public", "./public")
 
-	_ = r.Run(":3000" )
+	_ = r.Run( )
 }
